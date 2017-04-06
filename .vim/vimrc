@@ -1,0 +1,97 @@
+"===========================
+"   Vim Configurations
+"   monman
+"===========================
+
+"---------------------------
+" General
+"---------------------------
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set smartindent
+set expandtab
+set foldmethod=marker
+set clipboard=unnamedplus
+"let loaded_matchparen=1
+set number
+set relativenumber
+set laststatus=2
+
+
+
+"---------------------------
+" Color Scheme
+"---------------------------
+"colorscheme molokai
+syntax enable
+
+
+
+"---------------------------
+" Syntax Highlight
+"---------------------------
+set syntax=asciidoc
+autocmd BufNewFile,BufRead *.slim set ft=slim
+"autocmd BufNewFile,BufRead *.slim set tabstop=2 softtabstop=2 shiftwidth=2
+
+
+
+"---------------------------
+" Key Map
+"---------------------------
+inoremap jj <ESC>
+
+inoremap {<Enter> {<Enter>}<ESC><S-o>
+
+"inoremap '; <ESC>mzA;<ESC>`za      " insert ; in line-end
+"inoremap :; <ESC>mzA;<ESC>`za      " insert ; in line-end
+
+inoremap , ,<Space>
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+
+
+"---------------------------
+" Neo Bundle (Plugins)
+"---------------------------
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tyru/caw.vim.git'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'scrooloose/nerdtree'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck

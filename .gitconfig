@@ -1,0 +1,9 @@
+[core]
+editor  = vim
+
+[user]
+name    = monman53
+email   = monman.cs@gmail.com
+
+[color]
+status  = auto

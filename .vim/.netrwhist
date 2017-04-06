@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/monman/works/2016/gainen/views/search'
+let g:netrw_dirhist_2='/home/monman/works/2016/gainen/views/gainen'
+let g:netrw_dirhist_3='/home/monman/works/2016/gainen'
