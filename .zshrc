@@ -45,6 +45,10 @@ alias ll="ls -lhF --color"
 alias lla="ls -lhFa --color"
 alias l.="ls -lhFad --color .*"
 
+alias top="top -c -d0.2"
+
+alias tree="tree -a"
+
 alias ping8="ping 8.8.8.8"
 alias pingg="ping google.com"
 

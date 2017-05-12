@@ -18,6 +18,9 @@ set clipboard=unnamedplus
 set number
 set relativenumber
 set laststatus=2
+" remember cursor position
+autocmd BufWritePost * mkview
+autocmd BufReadPost * loadview
 
 
 
