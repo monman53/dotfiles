@@ -14,8 +14,8 @@ export HISTCONTROL=ignoredups
 #---------------------------
 BLACK="\[\e[1;37;40m\]"
 WHITE="\[\e[1;30;47m\]"
-RESET="\[\e[0;39;49m\]"
-export PS1="\n${BOLD}${BLACK} `date +%F\ %T` ${WHITE} `pwd` ${RESET}\n\u@\h $ "
+RESET="\[\e[0m\]"
+export PS1="\n${BOLD}${BLACK} \$(date +%F\ %T) ${WHITE} \$(pwd) \n${RESET}\u@\h $ "
 
 
 #---------------------------
@@ -31,7 +31,7 @@ alias l.="ls -lhFad --color .*"
 
 alias top="top -c -d0.1"
 
-alias tree="tree -a"
+alias tree="tree -aC"
 
 alias ping8="ping 8.8.8.8"
 alias pingg="ping google.com"
