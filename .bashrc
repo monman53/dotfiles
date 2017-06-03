@@ -6,7 +6,8 @@
 #---------------------------
 # General
 #---------------------------
-export HISTCONTROL=ignoredups
+complete -o bashdefault -d cd   # path expansion
+# export HISTCONTROL=ignoredups   # ignore duplicated histories
 
 
 #---------------------------
