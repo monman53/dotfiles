@@ -6,17 +6,20 @@
 #---------------------------
 # General
 #---------------------------
-complete -o bashdefault -d cd   # path expansion
-# export HISTCONTROL=ignoredups   # ignore duplicated histories
+# complete -o bashdefault -d cd   # path expansion
+export HISTCONTROL=ignoredups   # ignore duplicated histories
 
 
 #---------------------------
 # Prompt
 #---------------------------
-BLACK="\[\e[1;37;40m\]"
-WHITE="\[\e[1;30;47m\]"
-RESET="\[\e[0m\]"
-export PS1="\n${BOLD}${BLACK} \$(date +%F\ %T) ${WHITE} \$(pwd) \n${RESET}\u@\h $ "
+# BLACK="\[\e[1;97;40m\]"
+# WHITE="\[\e[1;30;107m\]"
+# RESET="\[\e[0m\]"
+BLACK="\[\033[1;97;40m\]"
+WHITE="\[\033[1;30;107m\]"
+RESET="\[\033[0m\]"
+export PS1="\n${BLACK} \D{%F %T} ${WHITE} \$(pwd) ${RESET}\n\u@\h $ "
 
 
 #---------------------------

@@ -1,9 +1,15 @@
-[core]
-editor  = vim
-
-[user]
-name    = monman53
-email   = monman.cs@gmail.com
+[alias]
+    br      = branch
+    ci      = commit
+    co      = checkout
+    st      = status
 
 [color]
-status  = auto
+    status  = auto
+
+[core]
+    editor  = vim
+
+[user]
+    name    = monman53
+    email   = monman.cs@gmail.com
