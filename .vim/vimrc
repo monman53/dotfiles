@@ -11,6 +11,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set smartindent
+set cindent
 set expandtab
 set foldmethod=marker
 set clipboard=unnamedplus
@@ -58,6 +59,14 @@ inoremap <C-k> <C-o>k
 inoremap <C-l> <C-o>l
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+nnoremap p ]p
+nnoremap P ]P
 
 
 
