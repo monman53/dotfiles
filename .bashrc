@@ -36,9 +36,9 @@ alias tree="tree -aC"
 alias ping8="ping 8.8.8.8"
 alias pingg="ping google.com"
 
-alias g++11="g++ -std=gnu++11"
-alias g++14="g++ -std=gnu++14"
-alias g++17="g++ -std=gnu++1z"
+alias g++11="g++ -std=c++11 -Wall -O2"
+alias g++14="g++ -std=c++14 -Wall -O2"
+alias g++17="g++ -std=c++1z -Wall -O2"
 
 
 #---------------------------

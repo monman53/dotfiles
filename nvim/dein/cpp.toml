@@ -1,0 +1,13 @@
+[[plugins]]
+repo = 'zchee/deoplete-clang'
+depends = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/include/clang/'
+'''
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_add = '''
+let g:syntastic_cpp_compiler_options = '-std=c++11'
+'''

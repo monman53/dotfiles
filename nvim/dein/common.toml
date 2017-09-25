@@ -1,0 +1,20 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup=1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#omni_input_patterns = {}
+set completeopt-=preview
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'

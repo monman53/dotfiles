@@ -8,7 +8,7 @@
     status  = auto
 
 [core]
-    editor  = vim
+    editor  = nvim
 
 [user]
     name    = monman53
