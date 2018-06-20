@@ -60,9 +60,9 @@ set laststatus=2
 set list
 set sh=bash
 " remember cursor position
-autocmd BufWritePost * mkview
-autocmd BufReadPost * loadview
-filetype plugin on
+"autocmd BufWritePost * mkview
+"autocmd BufReadPost * loadview
+"filetype plugin on
 
 
 

@@ -14,9 +14,15 @@ ln -s $PWD/nvim $HOME/.config/nvim
 
 
 #----------------
-# bash
+# zsh
 #----------------
-ln -fs $PWD/.bashrc $HOME/.bashrc
+ln -fs $PWD/.zshrc $HOME/.zshrc
+
+
+#----------------
+# tmux
+#----------------
+ln -fs $PWD/.tmux.conf $HOME/.tmux.conf
 
 
 #----------------

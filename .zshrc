@@ -1,42 +1,17 @@
-#===========================
-#   Zsh Configurations      
-#   monman                  
-#===========================
-
-#---------------------------
-# General
-#---------------------------
-autoload -Uz compinit promptinit colors
+# general
+autoload -Uz compinit promptinit
 compinit
 promptinit
-colors
-setopt HIST_IGNORE_ALL_DUPS
 
+setopt histignoredups
 
+# prompt
+export PROMPT='
+%F{whilte}%K{black} %D{%Y-%m-%d %H:%M:%S} %F{black}%K{white} %/ 
+%F{clear}%K{clear}%n@%M $ '
+export RPROMPT=''
 
-#---------------------------
-# Plugins
-#---------------------------
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh  // window closing bug on i3-urxvt when typing 'l'
-
-
-#---------------------------
-# Prompt
-#---------------------------
-
-autoload -Uz colrs
-colors
-
-PROMPT="
-${bg[black]} %D %* ${bg[white]}${fg_bold[black]} %d ${reset_color}
-%n@%m %# "
-
-
-
-#---------------------------
-# Aliases
-#---------------------------
+# aliases
 alias rm="rm -iv"
 
 alias l="ls -F --color"
@@ -45,20 +20,18 @@ alias ll="ls -lhF --color"
 alias lla="ls -lhFa --color"
 alias l.="ls -lhFad --color .*"
 
-alias top="top -c -d0.2"
+alias top="top -c -d0.1"
 
-alias tree="tree -a"
+alias tree="tree -aC"
 
 alias ping8="ping 8.8.8.8"
 alias pingg="ping google.com"
 
-alias g++11="g++ -std=c++0x"
-alias g++14="g++ -std=gnu++1y"
+alias g++11="g++ -std=c++11 -Wall -O2"
+alias g++14="g++ -std=c++14 -Wall -O2"
+alias g++17="g++ -std=c++1z -Wall -O2"
 
+alias tmux="TERM=screen-256color-bce tmux"
 
-#---------------------------
-# Environment Variables
-#---------------------------
-export TERM=xterm-256color # for strange bug for ssh with urxvt
-export GOPATH=$HOME/works/go
+# environment variable
 export PATH=$HOME/.gem/ruby/2.1.0/bin:$HOME/bin:$GOPATH/bin:$PATH
