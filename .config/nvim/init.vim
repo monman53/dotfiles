@@ -22,7 +22,6 @@ set clipboard=unnamedplus
 
 set guifont=Source\ Code\ Pro\ 11
 
-
 inoremap {<Enter> {<Enter>}<ESC><S-o>
 inoremap , ,<Space>
 
@@ -46,6 +45,9 @@ nnoremap p ]p
 "   * exec :PlugInstall
 
 call plug#begin()
+
+" NERDTree
+Plug 'preservim/nerdtree'
 
 " Coc is an intellisense engine for Vim/Neovim.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -75,6 +77,7 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+map <C-n> :NERDTreeToggle<CR>
 
 colorscheme nord
 let g:airline_powerline_fonts = 1
@@ -85,5 +88,5 @@ function! Formatonsave()
   exec ":%! clang-format"
   exec ":" . now_line
 endfunction
-autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
+autocmd BufWritePre *.h,*.cc,*.cpp,*.hpp call Formatonsave()
 
